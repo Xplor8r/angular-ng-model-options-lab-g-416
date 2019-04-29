@@ -23,7 +23,9 @@
 
     <div ng-app="app" class="app">
         <div ng-controller="SearchController as search">
-            <input ng-model="search.query" />
+            <input ng-model="search.query"
+            ng-model-options="{updateOn: 'blur', debounce: 500ms}"
+            />
 
             {{ search.query }}
         </div>
